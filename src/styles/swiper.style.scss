@@ -1,0 +1,41 @@
+.swiper-button-next,
+.swiper-button-prev {
+    color: $brown;
+    top: unset;
+    bottom: 0;
+}
+.swiper-button-next {
+    @include media-sm {
+        right: 30%;
+    }
+}
+
+.swiper-button-prev {
+    @include media-sm {
+        left: 30%;
+    }
+}
+.swiper-button-prev,
+.swiper-button-next {
+    width: fit-content;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: "";
+    background: url(../images/icon-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 44px 14px;
+    height: 30px;
+    width: 45px;
+    @include media-sm {
+        background-size: 90px 100px;
+        height: 30px;
+        width: 90px;
+    }
+}
+
+.swiper-button-prev:after {
+    transform: rotate(180deg);
+}

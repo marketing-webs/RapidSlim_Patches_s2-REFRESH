@@ -1,0 +1,85 @@
+@import "./global.style.scss";
+@import "./partials/header.style.scss";
+@import "./form.style.scss";
+@import "./sections/section-1.style.scss";
+@import "./sections/section-2.style.scss";
+@import "./sections/section-3.style.scss";
+@import "./sections/section-4.style.scss";
+@import "./sections/section-5.style.scss";
+@import "./sections/section-6.style.scss";
+@import "./sections/section-7.style.scss";
+@import "./sections/section-8.style.scss";
+@import "./sections/section-9.style.scss";
+@import "./sections/section-10.style.scss";
+@import "./sections/section-11.style.scss";
+@import "./sections/section-12.style.scss";
+@import "./sections/section-13.style.scss";
+@import "./partials/footer.style.scss";
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/swiper/swiper-vars.scss";
+@import "../../node_modules/swiper/components/navigation/navigation.scss";
+@import "../../node_modules/swiper/components/pagination/pagination.scss";
+@import "./swiper.style.scss";
+@import "./popups/popup.style.scss";
+@import "./stories/story.style.scss";
+
+* {
+    //   font-family: "Katibeh", cursive;
+    font-family: "Roboto Slab", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-weight: 400;
+}
+.main {
+    overflow: hidden;
+}
+
+p,
+span,
+li,
+input,
+textarea,
+button,
+a {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header__container,
+.section-1__container,
+.section-2__container,
+.section-3__container,
+.section-4__container,
+.section-5__container,
+.section-6__container,
+.section-7__container,
+.section-8__container,
+.section-10__container,
+.section-11__container,
+.section-12__container,
+.section-13__container,
+.partners__container,
+.copyrights__container {
+    max-width: 97rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.copyrights__container {
+    padding: 1rem;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px) grayscale(10%) brightness(80%);
+    z-index: 20;
+}

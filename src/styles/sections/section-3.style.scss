@@ -1,0 +1,76 @@
+.section-3 {
+    background-image: url(../images/main-checkmarks-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    &__container {
+        position: relative;
+        @include media-sm {
+            padding-right: 35rem !important;
+        }
+    }
+    &__header {
+        text-align: center;
+        margin: 3rem 0;
+        font-size: 4rem;
+        @include media-sm {
+            text-align: start;
+            max-width: 40rem;
+            font-size: 5rem;
+        }
+    }
+    &__list {
+        list-style-type: none;
+        position: relative;
+        margin-bottom: 40rem;
+        @include media-sm {
+            margin: 0;
+        }
+    }
+    &__item {
+        margin: 6rem;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 0;
+        padding-left: 10rem;
+        position: relative;
+        z-index: 1;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            background-image: url(../images/icon-checkmark-lg.svg);
+            height: 60px;
+            width: 60px;
+            background-size: 60px 60px;
+            background-repeat: no-repeat;
+        }
+        &:first-child {
+            margin-top: 3rem;
+        }
+        @include media-sm {
+            padding-left: 8rem;
+        }
+        &-text {
+            @include media-sm {
+                font-size: 2.2rem;
+            }
+        }
+    }
+    &__img {
+        position: absolute;
+        bottom: -22px;
+        left: 50%;
+        max-width: 35rem;
+        transform: translate(-50%, 0);
+        @include media-sm {
+            left: 88%;
+            bottom: -40px;
+            max-width: 65rem;
+        }
+    }
+}

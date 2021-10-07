@@ -1,0 +1,279 @@
+.form {
+    &-wrapper {
+        z-index: 10;
+        position: relative;
+        background-color: #01542A;
+        border: 1px solid white;
+        border-radius: 12px;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        max-width: 43rem;
+    }
+    &__header {
+        margin: 2rem 0;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+
+        @include media-md {
+            font-size: 4rem;
+            line-height: 4.8rem;
+        }
+    }
+    &__lead {
+        color: #F58013;
+    }
+    &__input {
+        background-color: rgba(255,255,255,.5);
+        display: block;
+        width: 100%;
+        padding: 1.5rem 1rem;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        &::placeholder {
+            color: white;
+            font-weight: 500;
+        }
+        &:focus {
+            outline: $brown auto 1px;
+        }
+    }
+    &__text {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+
+        @include media-md {
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+        }
+    }
+    &__price {
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+
+        @include media-md {
+            font-size: 3.5rem;
+            line-height: 4.8rem;
+        }
+    }
+    &__discount-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1rem 0;
+        p {
+            &:first-child {
+                text-decoration: line-through;
+            }
+        }
+
+        @include media-md {
+            margin: 2rem 0;
+        }
+    }
+    &__button {
+        border-radius: 10px;
+        width: 90%;
+        display: block;
+        background: white;
+        border: none;
+        margin: 2rem auto;
+        padding: 1rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 700;
+        box-shadow: 0px 7px 13px 0px #00000047;
+        letter-spacing: 0.1rem;
+        &:focus {
+            outline: $brown auto 1px;
+        }
+
+        @include media-md {
+            font-size: 2.4rem;
+            padding: 2rem;
+        }
+    }
+    &__counter {
+        margin: 1rem 0;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-weight: 700;
+
+        @include media-md {
+            font-size: 3.5rem;
+        }
+    }
+    // .error-feedback {
+    //     color: white;
+    //     bottom: -30px;
+    //     right: 7px;
+    //     font-size: 14px;
+    //     width: 250px;
+    //     text-align: right;
+    // }
+    &__input-wrapper {
+        position: relative;
+        width: 90%;
+        margin: 3rem auto;
+    }
+}
+
+.error-feedback {
+    visibility: hidden;
+    position: absolute;
+    color: red;
+    top: calc(100% + 5px);
+    right: 0;
+    font-size: 12px;
+    width: 250px;
+    text-align: right;
+}
+
+.hidden-form {
+    visibility: hidden;
+    display: block;
+    position: fixed;
+    z-index: 51;
+    width: 100%;
+    max-width: 510px;
+    margin: 0 auto;
+    top: 15%;
+    left: 50%;
+    bottom: -10%;
+    transform: translate(-50%, -10%);
+    background: #f7a00f;
+    padding: 30px;
+    overflow-y: scroll;
+    opacity: 0;
+    transition: all 0.3s ease;
+    &--active {
+        opacity: 1;
+        visibility: visible;
+        top: 10%;
+    }
+    .input__group {
+        margin-top: 25px;
+        .form__email {
+            margin-bottom: 20px;
+        }
+        .email {
+            .error-feedback {
+                bottom: 36px;
+                width: 250px;
+                text-align: right;
+            }
+        }
+    }
+    .input__group.required {
+        position: relative;
+        &::before {
+            content: "*";
+            position: absolute;
+            color: red;
+            left: -15px;
+            font-size: 20px;
+        }
+        .error-feedback {
+            bottom: -24px;
+            width: 250px;
+            text-align: right;
+        }
+    }
+    .discount {
+        &__text {
+            font-size: 17px;
+            span {
+                font-size: 17px;
+            }
+        }
+        &__partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            &-img {
+                width: fit-content;
+                margin: 15px;
+                img {
+                    width: auto;
+                    height: 35px;
+                }
+            }
+            + p {
+                background-color: #ffffe2;
+                border: 1px solid black;
+                padding: 10px;
+            }
+        }
+        &__input {
+            width: 100%;
+            border: 2px solid white;
+            border-radius: 40px;
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            background: transparent;
+            &::-webkit-input-placeholder {
+                color: white;
+            }
+            &:-moz-placeholder {
+                color: white;
+            }
+            &::-moz-placeholder {
+                color: white;
+            }
+            &:-ms-input-placeholder {
+                color: white;
+            }
+            &::-ms-input-placeholder {
+                color: white;
+            }
+            outline: none;
+        }
+        &__button-1 {
+            background-color: $violet;
+            border: none;
+            text-decoration: underline;
+            margin-top: 25px;
+            &:hover {
+                background-color: #571f96;
+            }
+        }
+    }
+    label {
+        color: black;
+        font-family: "MontserratBold";
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .input__wrapper {
+        span {
+            display: block;
+        }
+    }
+}
+
+.input__wrapper {
+    position: relative;
+    .error-feedback {
+        visibility: hidden;
+        position: absolute;
+        color: red;
+        bottom: -7px;
+        right: 0;
+        font-size: 12px;
+        width: 250px;
+        text-align: right;
+    }
+}
+
+.form__close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    cursor: pointer;
+}

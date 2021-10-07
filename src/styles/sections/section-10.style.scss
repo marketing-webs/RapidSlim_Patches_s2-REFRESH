@@ -1,0 +1,87 @@
+.section-10 {
+    background-image: url(../images/main-testimonials-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__header {
+        margin-top: 2rem;
+        @include media-sm {
+            position: relative;
+            font-size: 3.5rem;
+        }
+    }
+    .sign {
+        @include media-sm {
+            &::before {
+                position: absolute;
+                font-family: "Abril Fatface", cursive;
+                content: "[...]";
+                color: $lightPink;
+                font-size: 14rem;
+                bottom: -13rem;
+                right: 0;
+            }
+        }
+    }
+    &__svg {
+        max-width: 230px;
+        margin: 1rem 0;
+        @include media-sm {
+            max-width: 350px;
+        }
+    }
+    &__slider-wrapper {
+        margin: 4rem 0.5rem;
+    }
+    &__slider {
+        background-color: white;
+        @include flex-c;
+        flex-direction: column;
+        padding: 2rem;
+        border: 1px solid $brown;
+        border-radius: 10px;
+        margin-bottom: 6rem;
+        @include media-sm {
+            flex-direction: row;
+        }
+    }
+    &__sign-wrapper {
+        margin: 0 2rem;
+    }
+    &__sign {
+        margin-top: 1rem;
+        font-family: "Abril Fatface", cursive;
+        font-size: 2rem;
+        color: $brown;
+    }
+    &__location {
+        color: $brown;
+        margin-bottom: 2rem;
+    }
+    &__text {
+        line-height: 3rem;
+        @include media-sm {
+            margin-left: 2rem;
+        }
+    }
+    &__video-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-wrap: wrap;
+        margin: 3rem 0;
+        .section-10__header {
+            margin-bottom: 2rem;
+            @include media-sm {
+                margin: 0;
+                max-width: 36rem;
+                font-size: 3rem;
+            }
+        }
+    }
+    &__video {
+        height: auto;
+        width: 100%;
+        max-width: 50rem;
+    }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="161.173" viewBox="0 0 150 161.173">
+  <g id="Group_601" data-name="Group 601" transform="translate(-1287 -9144.718)">
+    <circle id="Ellipse_93" data-name="Ellipse 93" cx="75" cy="75" r="75" transform="translate(1287 9155.891)" fill="#f2dfd7"/>
+    <path id="icon-weight" d="M135.05,121.757,120.429,41.288A9.706,9.706,0,0,0,110.88,33.3H86.347a20.813,20.813,0,1,0-33.3,0H28.538a9.706,9.706,0,0,0-9.548,7.987L4.343,121.757a9.6,9.6,0,0,0,2.107,7.961,9.72,9.72,0,0,0,7.467,3.486H125.5a9.684,9.684,0,0,0,9.548-11.447ZM69.7,11.109a9.7,9.7,0,1,1-9.7,9.7A9.7,9.7,0,0,1,69.7,11.109Z" transform="translate(1292.986 9145.718)" fill="#fff" stroke="#573d1c" stroke-width="2"/>
+    <text id="kg" transform="translate(1361.5 9262.891)" fill="#573d1c" font-size="22" font-family="Roboto Slab"><tspan x="-13.02" y="0">kg</tspan></text>
+    <text id="_11-15" data-name="11-15" transform="translate(1360.5 9240.891)" fill="#573d1c" font-size="35" font-family="Roboto Slab" font-weight="700"><tspan x="-39.495" y="0">11-15</tspan></text>
+  </g>
+</svg>

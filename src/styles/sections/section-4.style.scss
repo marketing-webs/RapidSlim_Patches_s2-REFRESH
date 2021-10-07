@@ -1,0 +1,105 @@
+.section-4 {
+    background-image: url(../images/main-ingredients-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__container {
+        position: relative;
+    }
+    &__title-wrapper {
+        margin: 2rem 0;
+    }
+    &__header-wrapper {
+        @include media-sm {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            align-items: flex-end;
+        }
+    }
+    &__header {
+        font-size: 3.5rem;
+        @include media-sm {
+            font-size: 4.5rem;
+        }
+    }
+    &__text {
+        line-height: 3.5rem;
+    }
+    &__title-wrapper {
+        @include media-sm {
+            flex: 5;
+        }
+    }
+    &__title {
+        font-size: 2.5rem;
+    }
+    &__img-wrapper {
+        @include media-sm {
+            flex: 5;
+        }
+    }
+    &__img {
+        max-width: 40rem;
+        display: none;
+        @include media-sm {
+            display: block;
+            margin: 0 auto;
+            flex: 5;
+        }
+    }
+    &__content-wrapper {
+        margin: 2rem 0;
+        @include media-sm {
+            display: flex;
+        }
+    }
+    &__ingredient {
+        margin: 2rem;
+        &-title {
+            position: relative;
+            margin: 2rem 0;
+            padding-left: 70px;
+            min-height: 60px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-size: 60px 60px;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 60px;
+                height: 60px;
+            }
+        }
+        @include media-sm {
+            flex: 5;
+        }
+    }
+    .ing- {
+        &1 {
+            &::before {
+                background-image: url("../images/main-ingredients-1.png");
+            }
+        }
+        &2 {
+            &::before {
+                background-image: url("../images/main-ingredients-2.png");
+            }
+        }
+        &3 {
+            &::before {
+                background-image: url("../images/main-ingredients-3.png");
+            }
+        }
+        &4 {
+            &::before {
+                background-image: url("../images/main-ingredients-4.png");
+            }
+        }
+    }
+}

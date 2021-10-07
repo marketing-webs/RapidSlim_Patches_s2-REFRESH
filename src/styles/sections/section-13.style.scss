@@ -1,0 +1,62 @@
+.section-13 {
+    background-image: url(../images/main-order-bottom-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__header {
+        text-align: center;
+        &:last-of-type {
+            margin: 0 2rem 3rem 0;
+        }
+        @include media-md {
+            text-align: left;
+        }
+    }
+    &__list {
+        position: relative;
+        list-style-type: none;
+    }
+    &__item {
+        margin: 1rem 0 1rem 2rem;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../images/icon-bullet-point.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 15px 15px;
+            height: 15px;
+            width: 15px;
+            left: -20px;
+            top: 2px;
+            @include media-xs {
+                background-size: 20px 20px;
+                height: 20px;
+                width: 20px;
+                left: -30px;
+            }
+        }
+        @include media-xs {
+            max-width: 50rem;
+            margin: 1rem auto;
+        }
+        @include media-md {
+            margin-left: 2rem;
+        }
+    }
+    &__product {
+        display: block;
+        margin: 0 auto;
+        margin-top: 4rem;
+        max-width: 40rem;
+    }
+    &__container {
+        @include media-md {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 4rem !important;
+        }
+    }
+}

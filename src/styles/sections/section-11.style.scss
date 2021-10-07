@@ -1,0 +1,35 @@
+.section-11 {
+    background-image: url(../images/main-certificate-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__title {
+        font-size: 4.5rem;
+        margin-top: 2rem;
+        @include media-sm {
+            font-size: 5.5rem;
+        }
+    }
+    &__text {
+        max-width: 640px;
+        margin: 1rem auto;
+        line-height: 3.5rem;
+    }
+    &__content {
+        margin: 3rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__product {
+        width: 100%;
+        height: auto;
+        max-width: 55rem;
+    }
+    &__certificate {
+        width: 100%;
+        height: auto;
+        max-width: 35rem;
+    }
+}

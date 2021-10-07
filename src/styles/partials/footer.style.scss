@@ -1,0 +1,51 @@
+.footer {
+    &__partners {
+        background-color: #fff;
+        padding: 2rem 0;
+    }
+    &__copyrights {
+        background-color: $cream;
+        padding: 0.5rem 0;
+    }
+}
+
+.partners {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__header {
+        color: $brown;
+        margin-bottom: 1.8rem;
+        font-size: 3rem;
+    }
+    &__logo {
+        width: auto;
+        margin-left: 2rem;
+        max-height: 4.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.copyrights {
+    &__links {
+        a,
+        span {
+            font-size: 1.2rem;
+            color: $brown;
+            font-weight: 700;
+            @include media-sm {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    &__text {
+        font-size: 1.2rem;
+        font-weight: 300;
+        @include media-sm {
+            font-size: 1.4rem;
+        }
+    }
+}

@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@300;400;700&display=swap");
+$prime: #6f2dbd;
+$second: #96e6b2;
+$third: #404040;
+$forth: #b926281a;
+$fifth: #0083b2;
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Roboto Slab", serif;
+}
+
+main {
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.hover__circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: lightgray;
+    border-radius: 50%;
+    top: 50%;
+    right: 0px;
+    transform: translate(-10px, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $fifth;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: help;
+    &:hover {
+        &::before {
+            content: "Dlaczego muszę podać nr telefonu? Podany nr zostanie automatycznie autoryzowany do kontaktu z naszym biurem obsługi klienta. Na podany numer może również kontaktować się firma kurierska w celu umówienia dogodnego dla Państwa terminu odbioru przesyłk";
+            position: absolute;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 290px;
+            font-size: 14px;
+            border-radius: 10px;
+            color: #212121;
+            padding: 5px;
+            height: 155px;
+            background-color: #e4e4e4;
+            border: 1px solid black;
+            bottom: 112%;
+            right: -50px;
+        }
+    }
+}
+
+.text {
+    &--prime {
+        color: $prime;
+    }
+    &--lime {
+        color: $second;
+    }
+    &--gray {
+        color: $third;
+    }
+    &--align-center {
+        text-align: center;
+    }
+    &--align-left {
+        text-align: left;
+        width: 100%;
+    }
+    &--bold {
+        font-weight: 700;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 50;
+    top: 0;
+    left: 0;
+}
+
+.popup {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 51;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    &--active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    &__wrapper {
+        position: relative;
+        max-width: 1200px;
+        z-index: 52;
+        background-color: #fff;
+        padding: 40px;
+        text-align: center;
+        border-radius: 10px;
+        .popup__close {
+            position: absolute;
+            background: url("../../images/icon-x-pop-up.svg");
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            height: 30px;
+            width: 30px;
+            top: 2rem;
+            right: 2rem;
+            cursor: pointer;
+        }
+    }
+    &__header {
+        font-size: 30px;
+        .text--bold {
+            font-size: 30px;
+            color: $prime;
+        }
+    }
+    &__text {
+        font-size: 14px;
+        &:first-of-type {
+            margin: 0 22px 10px 22px;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+    &__form {
+        max-width: 510px;
+        margin: 30px auto;
+        .discount__input {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #b9b9b9;
+            -webkit-box-shadow: inset 0 0 5px #d4d4d4;
+            box-shadow: inset 0 0 5px #d4d4d4;
+            outline: none;
+        }
+        .form__wrapper {
+            .g-recaptcha {
+                div {
+                    margin: 0 auto;
+                }
+            }
+            .input__button {
+                margin: 20px 0;
+            }
+            .input__group {
+                margin-bottom: 30px;
+                &:first-of-type {
+                    display: flex;
+                    justify-content: space-between;
+                    select {
+                        width: 100px;
+                        color: #585858;
+                        padding: 12px;
+                        border-radius: 8px;
+                        border: 1px solid #b9b9b9;
+                        -webkit-box-shadow: inset 0 0 5px #d4d4d4;
+                        box-shadow: inset 0 0 5px #d4d4d4;
+                        margin-right: 10px;
+                        outline: none;
+                        text-align: center;
+                    }
+                    .input__wrapper {
+                        width: 100%;
+                    }
+                }
+            }
+            .discount__button-3 {
+                width: 50%;
+                margin: 0 auto;
+                font-size: 21px;
+                font-weight: 700;
+                border-radius: 30px;
+                background: $prime;
+                border: none;
+                outline: none;
+                padding: 20px 10px;
+                color: #f2f9ff;
+                -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+                box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+            }
+        }
+    }
+    a {
+        color: lightgray;
+        text-decoration: none;
+        &:hover {
+            color: $third;
+        }
+    }
+    &__rounded-banner {
+        border: 1px solid $prime;
+        padding: 15px 10px;
+        margin: 10px auto;
+        border-radius: 10px;
+        width: 90%;
+        p {
+            margin: 0;
+            span {
+                font-size: 15px;
+            }
+        }
+        background-color: #b9262857;
+        + p {
+            font-size: 13px;
+            color: gray;
+        }
+    }
+}
+
+.input__group.required {
+    position: relative;
+    margin-bottom: 20px;
+    &::before {
+        content: "*";
+        position: absolute;
+        color: red;
+        left: -15px;
+        font-size: 20px;
+    }
+}
+
+.input__wrapper {
+    position: relative;
+    .error-feedback {
+        visibility: hidden;
+        position: absolute;
+        color: red;
+        bottom: -22px;
+        right: 0;
+        font-size: 12px;
+        width: 230px;
+        text-align-last: right;
+    }
+}
+
+.discount {
+    min-height: 100vh;
+    max-width: 540px;
+    @include flexCenter();
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px 40px;
+    &__header {
+        font-size: 30px;
+        margin-bottom: 1rem;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        max-width: 320px;
+    }
+    &__text {
+        font-size: 14px;
+        span {
+            font-size: 14px;
+        }
+    }
+    &__timer {
+        font-size: 52px;
+        min-height: 78px;
+    }
+    &__promo {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    &__price {
+        padding: 20px 0;
+        p {
+            &:first-of-type {
+                font-size: 18px;
+                text-decoration: line-through;
+            }
+            &:nth-of-type(3) {
+                font-size: 22px;
+            }
+        }
+        .discount__text {
+            font-size: 20px;
+        }
+    }
+    &__form {
+        margin: 30px auto;
+        max-width: 300px;
+        &__header {
+            font-size: 25px;
+            margin-bottom: 1rem;
+        }
+        label {
+            font-size: 18px;
+            color: $third;
+            margin: 0;
+            font-family: "MontserratBold";
+        }
+        &__text {
+            font-size: 14px;
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+    &__input {
+        width: 100%;
+        border: 1px solid #d6d4d4;
+        border-radius: 4px;
+        color: #161616;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 8px 10px;
+    }
+    .button__wrapper {
+        padding: 10px 0;
+    }
+    &__button-1,
+    &__button-2 {
+        width: 100%;
+        text-decoration: underline;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 4px;
+        background: $prime;
+        border: none;
+        outline: none;
+        padding: 20px 10px;
+        margin-top: 30px;
+        color: #f2f9ff;
+        -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
+    &__hidden-form {
+        display: none;
+        margin: 30px auto;
+        margin-top: 0;
+        max-width: 300px;
+        label {
+            font-size: 18px;
+            color: $third;
+            margin: 0;
+            font-family: "MontserratBold";
+        }
+    }
+    &__yellow-container {
+        background-color: #ffffe2;
+        border: 1px solid black;
+        margin: 15px 0;
+        padding: 10px;
+        .discount__text {
+            margin: 15px;
+            width: 90%;
+        }
+    }
+    &__partners {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        &-img {
+            max-width: 140px;
+            margin: 15px;
+            img {
+                width: auto;
+                height: 35px;
+            }
+        }
+    }
+    &__info {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .popup {
+        &__wrapper {
+            &::before {
+                content: "POTRZEBUJESZ WIĘCEJ INFORMACJI?";
+                position: absolute;
+                top: -7%;
+                left: 0;
+                right: 0;
+                color: #fff;
+                font-size: 30px;
+            }
+            .popup__close {
+                top: 25px;
+                right: 25px;
+            }
+        }
+        &__text {
+            font-size: 16px;
+        }
+        &__header {
+            font-size: 40px;
+        }
+    }
+    .discount {
+        box-shadow: 1px 1px 13px 0 rgba(0, 0, 0, 0.3);
+        margin: 50px auto;
+        &__header {
+            font-size: 40px;
+        }
+        &__text {
+            font-size: 16px;
+        }
+        &__hidden-form {
+            max-width: 380px;
+        }
+        &__promo {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__img {
+            max-width: 330px;
+        }
+        &__form {
+            max-width: 380px;
+            &__text {
+                font-size: 16px;
+            }
+        }
+        &__button-1,
+        &__button-2 {
+            font-size: 18px;
+        }
+        &__partners {
+            &-img {
+                img {
+                    height: 45px;
+                }
+            }
+        }
+        .discount__price .discount__text {
+            font-size: 18px;
+        }
+        .discount__price p:first-of-type {
+            font-size: 18px;
+        }
+    }
+    .input__wrapper {
+        .error-feedback {
+            font-size: 13px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .discount {
+        max-width: 720px;
+        &__yellow-container {
+            .discount__text {
+                width: 95%;
+            }
+        }
+        &__form {
+            max-width: 510px;
+            .input__group {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                margin: 30px auto;
+                label {
+                    width: 25%;
+                    &:first-of-type {
+                        line-height: 20px;
+                    }
+                }
+                .input__wrapper {
+                    width: 70%;
+                }
+            }
+        }
+        &__button-1 {
+            margin-top: 10px;
+        }
+        &__hidden-form {
+            max-width: 510px;
+            .input__group {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                margin: 30px auto;
+                .input__wrapper {
+                    width: 70%;
+                }
+            }
+            label {
+                width: 25%;
+            }
+        }
+    }
+}

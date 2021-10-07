@@ -1,0 +1,99 @@
+.popup {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    position: fixed;
+    background: url(../images/pop-up-mobile-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 30;
+    @include media-sm {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 38rem;
+        width: 75rem;
+        background: url(../images/pop-up-bg.jpg);
+        background-size: cover;
+    }
+    @include media-md {
+        height: 43rem;
+        width: 85rem;
+    }
+    &--visible {
+        visibility: visible;
+        opacity: 1;
+    }
+    &__close {
+        position: fixed;
+        background: white;
+        padding: 1rem;
+        border-radius: 50%;
+        top: 1.5rem;
+        right: 1.5rem;
+        cursor: pointer;
+    }
+    &__content {
+        margin: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include media-sm {
+            margin: 4rem 0 4rem 4rem;
+            display: block;
+            flex-direction: unset;
+            justify-content: unset;
+            align-items: unset;
+        }
+    }
+    &__header {
+        margin-top: 5rem;
+        font-size: 6rem;
+        @include media-sm {
+            margin: 0;
+        }
+    }
+    &__push {
+        margin-top: 4rem;
+        @include media-md {
+            margin-top: 6rem;
+        }
+    }
+    &__title {
+        text-align: center;
+        @include media-sm {
+            text-align: left;
+        }
+    }
+    &__text {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        @include media-sm {
+            text-align: left;
+        }
+    }
+    &__button {
+        width: fit-content;
+        padding: 1rem 2rem;
+        display: block;
+        margin: 1rem;
+        border: 1px solid $violet;
+        border-radius: 10px;
+        margin-left: 0;
+    }
+    &__link {
+        color: lightgray;
+        font-size: 1.4rem;
+        @include media-sm {
+            margin-left: 8rem;
+        }
+    }
+}

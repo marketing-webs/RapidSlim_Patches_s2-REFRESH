@@ -1,0 +1,144 @@
+.section-5 {
+    background-color: $lightPink;
+    &__container {
+        position: relative;
+    }
+    &__header-wrapper {
+        position: relative;
+        margin: 1rem 0;
+        z-index: 2;
+        @include media-sm {
+            &::before {
+                position: absolute;
+                font-family: "Abril Fatface", cursive;
+                content: "[???]";
+                color: white;
+                font-size: 14rem;
+                top: 60%;
+                right: 0;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    &__header {
+        margin: 1rem 0;
+        @include media-sm {
+            font-size: 5.5rem;
+        }
+    }
+    &__header-img {
+        position: relative;
+        z-index: 2;
+        max-width: 250px;
+        @include media-sm {
+            max-width: 400px;
+        }
+    }
+    &__content-wrapper {
+        position: relative;
+        margin: 3rem 0 6rem 0;
+        @include media-sm {
+            margin: 13rem 0;
+        }
+    }
+    .absolute {
+        position: relative;
+        @include media-sm {
+            width: 100%;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    }
+    &__timeline {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 2rem 0;
+        z-index: 2;
+    }
+    &__day-banner {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $turque;
+        @include media-sm {
+            width: 150px;
+            height: 150px;
+        }
+        &::after {
+            position: absolute;
+            content: "dzień";
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            font-size: 2rem;
+            font-weight: 700;
+            @include media-sm {
+                top: 30px;
+            }
+        }
+        &::before {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            font-size: 6rem;
+            font-weight: 700;
+            @include media-sm {
+                top: 50px;
+            }
+        }
+    }
+    &__line {
+        width: calc(100% - 220px);
+        height: 50px;
+        border-top: 5px dotted $violet;
+        @include media-sm {
+            height: 120px;
+            width: calc(100% - 360px);
+        }
+    }
+    .day- {
+        &1 {
+            &::before {
+                content: "1";
+            }
+        }
+        &2 {
+            &::before {
+                content: "7";
+            }
+        }
+        &3 {
+            &::before {
+                content: "8";
+            }
+        }
+        &4 {
+            &::before {
+                content: "21";
+            }
+        }
+        &5 {
+            &::before {
+                content: "22";
+            }
+        }
+        &6 {
+            &::before {
+                content: "30";
+            }
+        }
+    }
+    &__text {
+        line-height: 3.5rem;
+        @include media-sm {
+            margin: 0 18rem;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.section-2 {
+    background-image: url(../images/main-description-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    &__container {
+        position: relative;
+        @include media-sm {
+            padding-left: 30rem !important;
+        }
+    }
+    &__img {
+        position: absolute;
+        z-index: 1;
+        max-width: 35rem;
+        bottom: -5px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        @include media-sm {
+            left: 0;
+            bottom: -10px;
+            max-width: 50rem;
+        }
+    }
+    &__svg {
+        margin-top: 3rem;
+        max-width: 30rem;
+    }
+    &__text {
+        line-height: 3.5rem;
+        position: relative;
+        margin: 3rem 0;
+        z-index: 2;
+    }
+    &__banner {
+        margin-top: 40rem;
+        position: relative;
+        background: $white;
+        border: 1px solid $purple;
+        padding: 1rem 3rem;
+        border-radius: 5px;
+        z-index: 2;
+        @include media-sm {
+            margin-top: 0;
+        }
+        .section-2__text {
+            text-align: center;
+        }
+    }
+}

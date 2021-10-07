@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&display=swap');
+
+$blue: #4a73c3;
+$purple: #5f4277;
+$violet: #6f2dbd;
+$turque: #96e6b2;
+$lightPink: #f5e4dd;
+$late: #f2dfd8;
+$brown: #573d1b;
+$cream: #f8efea;
+$formbg: #bba899;
+$inputbg: #e0d5cd;
+$white: #fff;
+$black: #000;
+
+@mixin media-xs {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+@mixin media-sm {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin media-md {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+@mixin media-lg {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin flex-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text--bold {
+    font-weight: 700;
+}
+
+.text--header {
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.text--title {
+    font-size: 1.8rem;
+}
+.text--ac {
+    text-align: center;
+}
+.text--italic {
+    font-style: italic;
+}
+.text--turque {
+    color: $turque;
+}
+.text--violet {
+    color: $violet;
+}
+.text--white {
+    color: $white;
+}
+.text--red {
+    color: #f44336;
+}
+.text--green {
+    color: #46fb5d;
+}
+.text--orange {
+    color: #F58013;
+}
+.img-resp {
+    width: 100%;
+    height: auto;
+}
+.mobile {
+    display: block;
+    @include media-sm {
+        display: none;
+    }
+}
+.desktop {
+    display: none;
+    @include media-sm {
+        display: block;
+    }
+}
+
+// @mixin media-xl { ... }
+
+// @media(min-width:576px){}
+// @media(min-width:768px){}
+// @media(min-width:992px){@content;}
+// @media(min-width:1200px){@content;}

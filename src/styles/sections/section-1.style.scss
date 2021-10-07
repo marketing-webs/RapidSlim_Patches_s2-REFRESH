@@ -1,0 +1,182 @@
+.section-1 {
+    background: linear-gradient(180deg, rgba(7,91,36,1) 0%, rgba(47,180,94,1) 100%);
+    
+    @include media-md {
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../images/s1_bg.jpg);
+    }
+
+    &__header-wrapper {
+        @include flex-c;
+        flex-direction: column;
+        @include media-md {
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 3rem 0;
+        }
+    }
+    &__logo {
+        width: 100%;
+        height: auto;
+        max-width: 125px;
+        display: block;
+        margin: 0 auto;
+        @include media-md {
+            margin: 0;
+            margin-left: 7rem;
+            max-width: 205px;
+        }
+    }
+    &__header {
+        margin: 3rem auto;
+        font-size: 2.5rem;
+        line-height: 3rem;
+        max-width: 49rem;
+        font-weight: 700;
+        text-align: center;
+
+        @include media-md {
+            margin: 0;
+            max-width: 44rem;
+            text-align: left;
+            font-size: 3.2rem;
+            line-height: 4rem;
+        }
+    }
+    &__content-wrapper {
+        @include media-md {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+    &__product-img {
+        position: absolute;
+        z-index: 1;
+        bottom: 79%;
+        left: 51%;
+        transform: translate(-47%, 0);
+        width: 100%;
+        height: auto;
+    }
+    &__badge-wrapper {
+        margin: 0 auto 4rem;
+        display: block;
+        position: relative;
+        background: linear-gradient(133deg, rgba(245,165,20,1) 0%, rgba(245,124,19,1) 100%);
+        max-width: 475px;
+        max-height: 480px;
+        width: calc(100vw - 35px);
+        height: calc(100vw - 35px);
+        border-radius: 50%;
+        margin-top: 50%;
+        box-shadow: 0 6px 8px rgba(197,92,0, 1);
+
+        @include media-xs {
+            margin-top: 26rem;
+        }
+    }
+    &__circle {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        max-width: 450px;
+        max-height: 430px;
+        width: calc(100vw - 50px);
+        height: calc(100vw - 50px);
+        background: #fff;
+        padding: 4rem 6rem;
+        border-radius: 50%;
+
+        @media (min-width: 525px) {
+            top: 16px;
+            right: 15px;
+        }
+        
+        &--text {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            font-family: 'Bai Jamjuree', sans-serif;
+            margin-bottom: .5rem;
+            font-weight: 400;
+
+            @media (min-width: 425px) {
+                font-size: 2rem;
+                line-height: 2.4rem;
+                margin-bottom: 1.5rem;
+            }
+            @media (min-width: 525px) {
+                font-size: 2.4rem;
+                line-height: 3.6rem;
+                margin-bottom: 1.5rem;
+            }
+
+            span {
+                font-family: 'Bai Jamjuree', sans-serif;
+
+                @media (min-width: 425px) {
+                    font-size: 2rem;
+                }
+                @media (min-width: 525px) {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+    &__circle-content {
+        position: absolute;
+        top: 50%;
+        left: 53%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        margin: 0 auto;
+        display: block;
+        @media (min-width: 375px) {
+            left: 55%;
+        }
+    }
+    &__list {
+        position: relative;
+        list-style-type: none;
+    }
+    &__item {
+        position: relative;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        padding-left: 2rem;
+
+        @media (min-width: 425px) {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            padding-left: 3rem;
+        }
+
+        span {
+            font-size: 1.2rem;
+
+            @media (min-width: 425px) {
+                font-size: 1.6rem;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../images/list-item-icon.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 12px 12px;
+            height: 12px;
+            width: 12px;
+            left: 0;
+            top: 2px;
+
+            @media (min-width: 525px) {
+                height: 18px;
+                width: 18px;
+                background-size: 18px 18px;
+            }
+        }
+    }
+}
