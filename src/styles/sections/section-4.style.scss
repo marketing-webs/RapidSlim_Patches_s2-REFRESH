@@ -1,8 +1,14 @@
 .section-4 {
-    background-image: url(../images/main-ingredients-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include media-sm {
+        background-position: bottom;
+        background-size: 100% 65%;
+        background-repeat: no-repeat;
+        background-image: url(../images/s4_bg.png);
+    }
+    @include media-md {
+        background-size: 100% 70%;
+        padding-bottom: 5rem;
+    }
     &__container {
         position: relative;
     }
@@ -14,17 +20,21 @@
             display: flex;
             justify-content: center;
             margin-top: 3rem;
-            align-items: flex-end;
+            align-items: center;
         }
     }
     &__header {
-        font-size: 3.5rem;
-        @include media-sm {
-            font-size: 4.5rem;
-        }
+        color: #000;
+        margin-bottom: 2rem;
     }
     &__text {
-        line-height: 3.5rem;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+
+        @include media-md {
+            font-size: 1.8rem;
+            line-height: 3.6rem;
+        }
     }
     &__title-wrapper {
         @include media-sm {
@@ -32,7 +42,12 @@
         }
     }
     &__title {
-        font-size: 2.5rem;
+        font-size: 1.6rem;
+
+        @include media-md {
+            font-size: 2.4rem;
+            line-height: 3.6rem
+        }
     }
     &__img-wrapper {
         @include media-sm {
@@ -46,6 +61,7 @@
             display: block;
             margin: 0 auto;
             flex: 5;
+            max-width: 100%;
         }
     }
     &__content-wrapper {
@@ -55,11 +71,13 @@
         }
     }
     &__ingredient {
-        margin: 2rem;
+        @include media-sm {
+            margin-right: 6rem;
+        }
         &-title {
             position: relative;
             margin: 2rem 0;
-            padding-left: 70px;
+            padding-left: 75px;
             min-height: 60px;
             display: flex;
             justify-content: flex-start;
@@ -69,36 +87,39 @@
                 position: absolute;
                 left: 0;
                 top: 0;
-                background-size: 60px 60px;
+                background-size: 64px 64px;
                 background-position: center;
                 background-repeat: no-repeat;
-                width: 60px;
-                height: 60px;
+                width: 64px;
+                height: 64px;
             }
         }
         @include media-sm {
             flex: 5;
         }
+        @include media-md {
+            font-size: 2.4rem;
+        }
     }
     .ing- {
         &1 {
             &::before {
-                background-image: url("../images/main-ingredients-1.png");
+                background-image: url("../images/s4-goja.png");
             }
         }
         &2 {
             &::before {
-                background-image: url("../images/main-ingredients-2.png");
+                background-image: url("../images/s4-morwa.png");
             }
         }
         &3 {
             &::before {
-                background-image: url("../images/main-ingredients-3.png");
+                background-image: url("../images/s4-kora.png");
             }
         }
         &4 {
             &::before {
-                background-image: url("../images/main-ingredients-4.png");
+                background-image: url("../images/s4-yerba.png");
             }
         }
     }

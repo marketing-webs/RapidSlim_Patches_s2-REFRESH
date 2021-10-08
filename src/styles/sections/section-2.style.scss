@@ -1,44 +1,88 @@
 .section-2 {
-    background-image: url(../images/main-description-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     overflow: hidden;
+    padding-bottom: 2rem;
+
+    @include media-md {
+        padding-bottom: 8.5rem;
+    }
     &__container {
         position: relative;
         @include media-sm {
-            padding-left: 30rem !important;
+            padding-left: 32rem !important;
         }
+    }
+    &__content {
+        position: relative;
+        z-index: 2;
     }
     &__img {
         position: absolute;
         z-index: 1;
-        max-width: 35rem;
-        bottom: -5px;
-        left: 50%;
+        max-width: 60rem;
+        bottom: -25px;
+        left: 70%;
         transform: translate(-50%, 0);
+
+        @media (min-width: 525px) {
+            max-width: 52rem;
+            left: 60%;
+        }
         @include media-sm {
-            left: 0;
-            bottom: -10px;
-            max-width: 50rem;
+            left: 25%;
+            bottom: -30px;
+            max-width: 60rem;
+        }
+        @include media-md {
+            bottom: -10rem;
+            max-width: 100rem;
         }
     }
     &__svg {
         margin-top: 3rem;
-        max-width: 30rem;
+        max-width: 26rem;
+    }
+    &__header {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        font-weight: 700;
+        font-family: 'Bai Jamjuree', sans-serif;
+
+        @include media-md {
+            font-size: 5rem;
+            line-height: 5.6rem;
+        }
     }
     &__text {
-        line-height: 3.5rem;
-        position: relative;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
         margin: 3rem 0;
-        z-index: 2;
+
+        @include media-md {
+            font-size: 1.8rem;
+            line-height: 3.6rem;
+
+            &:first-child{
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    &__text-banner {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        text-align: center;
+        font-weight: 700;
+
+        @include media-md {
+            font-size: 1.8rem;
+            line-height: 3.6rem;
+        }
     }
     &__banner {
-        margin-top: 40rem;
+        margin-top: 36rem;
         position: relative;
         background: $white;
         border: 1px solid $purple;
-        padding: 1rem 3rem;
+        padding: 1rem 0;
         border-radius: 5px;
         z-index: 2;
         @include media-sm {

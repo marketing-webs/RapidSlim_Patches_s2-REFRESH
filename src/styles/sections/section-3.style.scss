@@ -1,9 +1,16 @@
 .section-3 {
-    background-image: url(../images/main-checkmarks-bg.jpg);
+    background-image: url(../images/s3_bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    padding-top: 4rem;
+
+    @include media-md {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    
     &__container {
         position: relative;
         @include media-sm {
@@ -11,42 +18,40 @@
         }
     }
     &__header {
+        color: #fff;
         text-align: center;
-        margin: 3rem 0;
-        font-size: 4rem;
+
         @include media-sm {
-            text-align: start;
-            max-width: 40rem;
-            font-size: 5rem;
+            text-align: left;
         }
     }
     &__list {
         list-style-type: none;
         position: relative;
-        margin-bottom: 40rem;
+        margin-bottom: 35rem;
         @include media-sm {
             margin: 0;
         }
     }
     &__item {
-        margin: 6rem;
+        margin: 3rem 0;
         height: 60px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         margin-left: 0;
-        padding-left: 10rem;
+        padding-left: 6rem;
         position: relative;
         z-index: 1;
         &::before {
             position: absolute;
-            top: 0;
+            top: 1rem;
             left: 0;
             content: "";
             background-image: url(../images/icon-checkmark-lg.svg);
-            height: 60px;
-            width: 60px;
-            background-size: 60px 60px;
+            height: 42px;
+            width: 42px;
+            background-size: 42px 42px;
             background-repeat: no-repeat;
         }
         &:first-child {
@@ -54,8 +59,28 @@
         }
         @include media-sm {
             padding-left: 8rem;
+            margin: 3rem 3rem 3rem 0;
+        }
+        @include media-md {
+            font-size: 2.4rem;
+            line-height: 3.6rem;
+            margin: 5rem 15rem 5rem 0;
+
+            &:first-child {
+                margin-top: 6rem;
+            }
+
+            &::before {
+                width: 68px;
+                height: 68px;
+                background-size: 68px 68px;
+                top: -3px;
+            }
         }
         &-text {
+            color: #fff;
+            font-size: 1.4rem;
+
             @include media-sm {
                 font-size: 2.2rem;
             }
@@ -64,13 +89,21 @@
     &__img {
         position: absolute;
         bottom: -22px;
-        left: 50%;
-        max-width: 35rem;
+        left: 69%;
+        width: 45rem;
         transform: translate(-50%, 0);
         @include media-sm {
             left: 88%;
             bottom: -40px;
-            max-width: 65rem;
+            width: 55rem;
+        }
+        @include media-md {
+            width: 86rem;
+            bottom: -62px;
+        }
+        @include media-lg {
+            width: 97rem;
+            left: 95%;
         }
     }
 }
