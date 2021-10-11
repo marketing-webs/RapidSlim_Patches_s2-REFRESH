@@ -1,29 +1,28 @@
 .section-7 {
-    background-image: url(../images/main-research-results-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #F1FAF5;
     &__container {
         position: relative;
     }
     &__content {
         padding-bottom: 2rem;
         margin-bottom: 1rem;
-        border-bottom: 3px dashed $violet;
+        border-bottom: 2px dashed #17823D;
     }
     &__header {
         margin-top: 3rem;
-        font-size: 4rem;
-        @include media-sm {
-            font-size: 5.5rem;
-            text-align: center;
-        }
+        text-align: center;
     }
     &__text {
-        margin: 2rem 0;
-        line-height: 3.5rem;
-        @include media-sm {
-            text-align: center;
+        margin: 2rem auto;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        text-align: center;
+        width: 100%;
+        max-width: 70%;
+
+        @include media-md {
+            font-size: 1.8rem;
+            line-height: 3.2rem;
         }
     }
     &__type {
@@ -34,11 +33,15 @@
             @include flex-c;
         }
     }
+    &__img {
+        display: block;
+        width: 100%;
+    }
     &__items {
         display: flex;
         justify-content: space-around;
         align-items: baseline;
-        margin: 1rem;
+        margin: 1rem 0;
     }
     &__item {
         display: flex;
@@ -50,13 +53,32 @@
         .section-7__text:nth-child(2) {
             margin: 0;
         }
+
+        @include media-md {
+            flex-direction: row;
+            margin: 2rem .5rem;
+        }
+
+        &-text {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+
+            @include media-md {
+                font-size: 2.4rem;
+                line-height: 3.6rem;
+            }
+        }
     }
     &__icon {
         padding-bottom: 1rem;
+
+        @include media-md {
+            padding: 0;
+        }
     }
 
     &__content-2 {
-        margin-top: 5rem;
+        margin-top: 4rem;
         .section-7 {
             &__products {
                 position: relative;
@@ -119,18 +141,36 @@
         }
     }
     &__banner {
-        border: 1px solid $violet;
+        border: 2px solid #17823D;
         border-radius: 10px;
         margin: 3rem 0;
-        padding: 1rem 4rem;
-        font-size: 1.4rem;
+        text-align: center;
+        padding: 1rem 0;
+
+        @include media-sm {
+            padding: 2rem 14rem;
+        }
+        @include media-md {
+            padding: 2rem 16rem;
+        }
+
+        &-text {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: 500;
+
+            span {
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
     }
     &__divider {
         @include media-sm {
-            margin: 3rem 0;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            margin: 3rem auto;
+            width: 100%;
+            max-width: 62rem;
         }
     }
 }

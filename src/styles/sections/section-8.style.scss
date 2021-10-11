@@ -1,8 +1,10 @@
 .section-8 {
-    background-image: url(../images/main-doctor-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include media-sm {
+        background-image: url(../images/s8_bg.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     &__container {
         position: relative;
     }
@@ -26,7 +28,7 @@
     }
     &__doctor {
         position: relative;
-        border-bottom: 1px solid $late;
+        border-bottom: 1px solid #1C8F45;
         margin-bottom: 2rem;
         @include media-sm {
             margin-bottom: 0;
@@ -37,7 +39,7 @@
         max-width: 320px;
     }
     &__bottom-banner {
-        background-color: $late;
+        background-color: #1C8F45;
         border-radius: 10px 10px 0 0;
         width: 80%;
         position: absolute;
@@ -49,27 +51,29 @@
     }
     &__sign {
         font-size: 3rem;
+        color: #fff;
+        font-weight: 800;
+        
+        &-title {
+            color: #fff;
+        }
     }
     &__header {
-        line-height: 4rem;
         margin: 2rem 0;
-        @include media-sm {
-            font-size: 5.5rem;
-            line-height: 6rem;
-        }
     }
     &__title {
         margin: 2rem 0 1rem 0;
     }
     &__text {
-        line-height: 3.5rem;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
     }
     &__loading-container {
-        border: 1px solid $turque;
+        border: 1px solid #F5A114;
         border-radius: 10px;
         .section-8__loading {
             padding: 1.5rem 1rem;
-            background: $turque;
+            background: #F5A114;
             border-radius: 10px;
         }
         &:first-of-type {
@@ -100,7 +104,7 @@
     }
     &__data-container {
         padding-top: 5rem;
-        border-top: 3px dashed $late;
+        border-top: 3px dashed #17823D;
         @include media-sm {
             display: flex;
             justify-content: space-between;
@@ -114,6 +118,12 @@
             "ld ld ld ld";
         margin: 5rem auto;
         max-width: 50rem;
+
+        @include media-md {
+            grid-template-areas:
+            "img lbl lbl"
+            "img ld ld";
+        }
         &:nth-of-type(1) {
             .section-8__loading {
                 width: 16.4%;
@@ -136,68 +146,106 @@
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+
+                @include media-md {
+                    margin: 0;
+                    justify-content: center;
+                }
             }
             &__img {
                 max-height: 120px;
+
+                @include media-md {
+                    max-height: 150px;
+                }
             }
             &__label {
                 grid-area: lbl;
                 margin: 0 0 2rem 2rem;
+                font-size: 2.4rem;
+                font-weight: 700;
                 display: flex;
                 justify-content: start;
                 align-items: flex-end;
+
+                @include media-md {
+                    margin: 0 0 1rem 0;
+                    font-size: 3.2rem;
+                }
             }
             &__loading-container {
                 position: relative;
                 grid-area: ld;
-                border-color: $violet;
+                border-color: #1C8F45;
+
+                @include media-md {
+                    height: 5rem;
+                }
             }
             &__loading {
                 height: 50px;
-                background-color: $violet;
+                background-color: #1C8F45;
+
+                @include media-md {
+                    height: 5rem;
+                }
             }
             &__loading-text {
                 position: absolute;
+                color: #000;
                 top: 50%;
                 right: 5px;
                 transform: translate(-10px, -50%);
             }
         }
     }
+    &__loading-text {
+        color: #fff;
+    }
     &__data {
+        @include media-sm {
+            
+            width: 45%;
+        }
         &-title {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: "Bai Jumjuree", sans-serif;
+
+            @include media-sm {
+                font-size: 3.5rem;
+                padding: 0 6rem;
+            }
+            @include media-md {
+                font-size: 4rem;
+            }
         }
         &:nth-of-type(2) {
-            margin-left: 2rem;
-            .section-8__data-title {
-                padding: 0 6.767rem;
-            }
             .section-8__content-wrapper {
                 &:nth-of-type(1) {
                     .section-8__loading-container {
-                        border-color: $late;
+                        border-color: #F1CC18;
                     }
                     .section-8__loading {
-                        background-color: $late;
-                        width: 39.2%;
+                        background-color: #F1CC18;
+                        width: 59.2%;
                     }
                 }
                 &:nth-of-type(2) {
                     .section-8__loading-container {
-                        border-color: $late;
+                        border-color: #F1CC18;
                     }
                     .section-8__loading {
-                        background-color: $late;
+                        background-color: #F1CC18;
                         width: 28.4%;
                     }
                 }
                 &:nth-of-type(3) {
                     .section-8__loading-container {
-                        border-color: $late;
+                        border-color: #F1CC18;
                     }
                     .section-8__loading {
-                        background-color: $late;
+                        background-color: #F1CC18;
                         width: 32.4%;
                     }
                 }
