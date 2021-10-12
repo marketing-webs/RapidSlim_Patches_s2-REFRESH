@@ -6,13 +6,13 @@
 }
 .swiper-button-next {
     @include media-sm {
-        right: 30%;
+        right: 10%;
     }
 }
 
 .swiper-button-prev {
     @include media-sm {
-        left: 30%;
+        left: 10%;
     }
 }
 .swiper-button-prev,
@@ -23,7 +23,7 @@
 .swiper-button-next:after,
 .swiper-button-prev:after {
     content: "";
-    background: url(../images/icon-arrow.svg);
+    background: url(../images/arrow-2.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 44px 14px;

@@ -1,33 +1,48 @@
 .section-10 {
-    background-image: url(../images/main-testimonials-bg.jpg);
+    background-image: url(../images/s10_bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     &__header {
         margin-top: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
         @include media-sm {
             position: relative;
-            font-size: 3.5rem;
+            text-align: left;
         }
     }
     .sign {
         @include media-sm {
             &::before {
                 position: absolute;
-                font-family: "Abril Fatface", cursive;
+                font-family: "Bai Jamjuree", sans-serif;
                 content: "[...]";
-                color: $lightPink;
+                color: #F5A114;
                 font-size: 14rem;
-                bottom: -13rem;
-                right: 0;
+                bottom: -8rem;
+                right: 14rem;
+            }
+        }
+        @include media-md {
+            &::before {
+                font-size: 18rem;
             }
         }
     }
-    &__svg {
-        max-width: 230px;
-        margin: 1rem 0;
+    &__img-wrapper {
+        text-align: center;
+
         @include media-sm {
-            max-width: 350px;
+            text-align: left;
+        }
+    }
+    &__svg {
+        max-width: 110px;
+        margin: 1rem auto;
+        width: 100%;
+        @include media-sm {
+            max-width: 200px;
         }
     }
     &__slider-wrapper {
@@ -37,8 +52,8 @@
         background-color: white;
         @include flex-c;
         flex-direction: column;
-        padding: 2rem;
-        border: 1px solid $brown;
+        padding: 1rem;
+        border: 1px solid #1C8F45;
         border-radius: 10px;
         margin-bottom: 6rem;
         @include media-sm {
@@ -47,41 +62,106 @@
     }
     &__sign-wrapper {
         margin: 0 2rem;
+        text-align: center;
+
+        @include media-sm {
+            width: 25%;
+        }
+    }
+    &__avatar {
+        position: relative;
+        z-index: 2;
+    }
+    &__avatar-wrapper {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 53%;
+            left: 53%;
+            width: 14rem;
+            height: 14rem;
+            background-color: #F2DFD7;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 1;
+        }
     }
     &__sign {
         margin-top: 1rem;
-        font-family: "Abril Fatface", cursive;
+        font-family: "Bai Jamjuree", sans-serif;
         font-size: 2rem;
-        color: $brown;
-    }
-    &__location {
-        color: $brown;
+        font-weight: 700;
         margin-bottom: 2rem;
+        color: #1C8F45;
+        text-align: center;
+
+        @include media-md {
+            font-size: 3rem;
+        }
     }
     &__text {
-        line-height: 3rem;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        font-weight: 500;
         @include media-sm {
-            margin-left: 2rem;
+            width: 75%;
+            font-size: 1.8rem;
+            line-height: 3.6rem;
+        }
+    }
+    &__undertitle {
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @include media-sm {
+            text-align: left;
+            font-size: 3.5rem;
+        }
+        @include media-md {
+            font-size: 3.5rem;
+        }
+    }
+    &__text-wrapper {
+        @include media-sm {
+            text-align: left;
         }
     }
     &__video-wrapper {
         display: flex;
         justify-content: center;
         align-items: start;
-        flex-wrap: wrap;
         margin: 3rem 0;
+        flex-direction: column;
+
+        @include media-sm {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         .section-10__header {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+
             @include media-sm {
-                margin: 0;
-                max-width: 36rem;
-                font-size: 3rem;
+                font-size: 4.8rem;
+                line-height: 6rem;
+                max-width: 45rem;
+                text-align: left;
+            }
+            @include media-md {
+                font-size: 6rem;
+                line-height: 7rem;
             }
         }
     }
     &__video {
         height: auto;
         width: 100%;
-        max-width: 50rem;
+        max-width: 48rem;
     }
 }

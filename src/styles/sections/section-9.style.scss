@@ -1,10 +1,11 @@
 .section-9 {
-    background-color: $lightPink;
+    background-color: #F5A114;
     @include media-lg {
-        background-image: url(../images/main-journals-bg.jpg);
+        // background: linear-gradient(132deg, rgba(245,161,20,1) 0%, rgba(245,161,20,1) 100%);
+        background-image: url(../images/s9_bg.jpg);
+        background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-repeat: no-repeat;
     }
     &__container {
         position: relative;
@@ -32,11 +33,64 @@
             font-size: 5.5rem;
         }
     }
+    &__image-wrap {
+        position: relative;
+
+        &::before {
+            content: 'Przed';
+            position: absolute;
+            left: 3px;
+            bottom: 4px;
+            width: 65px;
+            height: 23px;
+            background-color: #F5A114;
+            border: 1px solid #fff;
+            border-top-right-radius: 10px;
+            color: #fff;
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        &::after {
+            content: 'Po';
+            position: absolute;
+            right: 3px;
+            bottom: 4px;
+            width: 65px;
+            height: 23px;
+            background-color: #F5A114;
+            border: 1px solid #fff;
+            border-top-left-radius: 10px;
+            color: #fff;
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        @include media-md {
+            &::before,
+            &::after {
+                width: 100px;
+                height: 30px;
+                font-size: 1.8rem;
+            }
+        }
+    }
     &__img {
         width: 100%;
         height: auto;
         border: 1px solid white;
         border-radius: 10px 10px 0 0;
+    }
+    &__icon-arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
     }
     &__badges {
         display: flex;
@@ -46,14 +100,28 @@
     }
     &__sign {
         margin-top: 1rem;
-        font-size: 2.3rem;
+        font-size: 3rem;
+        font-family: 'Katibeh', cursive;
+
+        @include media-md {
+            font-size: 3.5rem;
+        }
     }
     &__quotes {
-        width: 80%;
+        width: 60%;
         margin: 2rem auto;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        font-weight: 800;
+
+        @include media-md {
+            font-size: 2.4rem;
+            width: 100%;
+            line-height: 3.6rem;
+        }
     }
     &__button {
-        background-color: $violet;
+        background-color: #1C8F45;
         border: none;
         display: block;
         margin: 1rem auto;
@@ -61,5 +129,9 @@
         padding: 2rem;
         border-radius: 5px;
         cursor: pointer;
+
+        @include media-md {
+            font-size: 1.8rem;
+        }
     }
 }
