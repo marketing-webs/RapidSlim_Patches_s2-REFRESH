@@ -1,8 +1,5 @@
 .section-12 {
-    background-image: url(../images/main-order-steps-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #F1FAF5;
 
     &__header-container {
         @include media-sm {
@@ -13,39 +10,73 @@
         }
     }
     &__logo {
-        max-width: 230px;
-        margin: 1rem 0 3rem 0;
+        display: none;
         @include media-sm {
-            max-width: 350px;
+            width: 100%;
+            display: block;
+            max-width: 185px;
         }
     }
     &__title {
         margin-top: 1rem;
-        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+
         @include media-sm {
             margin-top: 1rem;
-            font-size: 4.5rem;
+            text-align: left;
+            margin-bottom: 2rem;
         }
     }
     &__banner {
         max-width: 44rem;
-        border: 1px solid $violet;
+        border: 1px solid #17823D;
+        background-color: #17823D;
         border-radius: 10px;
         padding: 2rem;
         margin: 0 auto;
+        color: #fff;
+        box-shadow: 0px 5px 10px rgba(87, 61, 28, .25);
         @include media-sm {
             margin: unset;
+            padding: 5rem;
         }
         .section-12__title {
             font-size: 3.5rem;
         }
+        .section-12__text {
+            margin-bottom: 1rem;
+        }
     }
     &__text-wrapper {
         @include flex-c;
+
+        @include media-sm {
+            align-items: flex-start;
+        }
+    }
+    &__phone-icon {
+        width: 100%;
+        max-width: 68px;
+        margin-right: 2rem;
+    }
+    &__text-wrap {
+        text-align: left;
+
+        .banner-time {
+            text-align: left;
+            font-size: 3rem;
+            font-weight: 700;
+        }
     }
     &__svg {
         margin: 0 2rem;
+        width: 100%;
         max-width: 105px;
+
+        @include media-md {
+            max-width: 150px;
+        }
     }
     &__content {
         display: flex;

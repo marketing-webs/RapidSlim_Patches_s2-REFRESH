@@ -4,7 +4,7 @@
         padding: 2rem 0;
     }
     &__copyrights {
-        background-color: $cream;
+        background-color: #F5A114;
         padding: 0.5rem 0;
     }
 }
@@ -17,9 +17,11 @@
         flex-wrap: wrap;
     }
     &__header {
-        color: $brown;
+        color: #17823D;
         margin-bottom: 1.8rem;
-        font-size: 3rem;
+        font-size: 2rem;
+        font-weight: 600;
+        font-family: 'Bai Jamjuree', sans-serif;
     }
     &__logo {
         width: auto;
