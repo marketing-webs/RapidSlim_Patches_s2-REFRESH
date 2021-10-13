@@ -93,13 +93,14 @@
                 width: 64px;
                 height: 64px;
             }
+            @include media-md {
+                font-size: 2.4rem;
+            }
         }
         @include media-sm {
             flex: 5;
         }
-        @include media-md {
-            font-size: 2.4rem;
-        }
+        
     }
     .ing- {
         &1 {

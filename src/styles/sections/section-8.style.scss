@@ -17,7 +17,7 @@
         @include media-sm {
             flex-direction: row;
             align-items: flex-end;
-            border-bottom: 1px solid $late;
+            border-bottom: 2px solid #1C8F45;
             margin: 4rem 0;
         }
     }
@@ -37,6 +37,10 @@
     }
     &__doctor-img {
         max-width: 320px;
+
+        @include media-sm {
+            max-width: 360px;
+        }
     }
     &__bottom-banner {
         background-color: #1C8F45;
@@ -60,6 +64,11 @@
     }
     &__header {
         margin: 2rem 0;
+
+        @include media-md {
+            font-size: 5rem;
+            line-height: 6rem;
+        }
     }
     &__title {
         margin: 2rem 0 1rem 0;
@@ -67,6 +76,11 @@
     &__text {
         font-size: 1.4rem;
         line-height: 2.1rem;
+
+        @include media-sm {
+            font-size: 1.8rem;
+            line-height: 3.6rem;
+        }
     }
     &__loading-container {
         border: 1px solid #F5A114;

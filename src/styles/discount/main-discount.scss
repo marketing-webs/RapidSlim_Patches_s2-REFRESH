@@ -263,7 +263,9 @@ p {
         text-align-last: right;
     }
 }
-
+.text--orange {
+    color: #F58013;
+}
 .discount {
     min-height: 100vh;
     max-width: 540px;
@@ -272,6 +274,7 @@ p {
     margin: 0 auto;
     padding: 20px 40px;
     &__header {
+        color: #1C8F45;
         font-size: 30px;
         margin-bottom: 1rem;
     }
@@ -287,8 +290,10 @@ p {
         }
     }
     &__timer {
+        color: #F57E13;
         font-size: 52px;
         min-height: 78px;
+        font-weight: 700;
     }
     &__promo {
         margin: 0 auto;
@@ -315,6 +320,7 @@ p {
         &__header {
             font-size: 25px;
             margin-bottom: 1rem;
+            color: #17823D;
         }
         label {
             font-size: 18px;
@@ -348,7 +354,7 @@ p {
         font-size: 16px;
         font-weight: 700;
         border-radius: 4px;
-        background: $prime;
+        background: #17823D;
         border: none;
         outline: none;
         padding: 20px 10px;
