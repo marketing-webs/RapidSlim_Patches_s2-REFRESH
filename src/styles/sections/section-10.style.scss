@@ -50,6 +50,7 @@
     }
     &__slider {
         background-color: white;
+        box-shadow: 0px 5px 10px rgba(87,61,28, .25);
         @include flex-c;
         flex-direction: column;
         padding: 1rem;

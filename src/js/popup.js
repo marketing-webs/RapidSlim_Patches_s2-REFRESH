@@ -6,7 +6,7 @@ let windowWidth = window.innerWidth;
 const layer = document.querySelector(".overlay");
 const popUp = document.getElementById("popup");
 const popUpClose = document.getElementById("popup-close");
-const section = document.querySelector(".section-13");
+const section = document.querySelector(".section-12");
 
 ///////////////////////////////////// POPUPS
 const popupTimeout = () => {

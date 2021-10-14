@@ -29,7 +29,9 @@
         background-color: rgba(255,255,255,.5);
         display: block;
         width: 100%;
+        outline: none;
         padding: 1.5rem 1rem;
+        color: #fff;
         border: 1px solid transparent;
         border-radius: 5px;
         &::placeholder {
@@ -37,7 +39,7 @@
             font-weight: 500;
         }
         &:focus {
-            outline: $brown auto 1px;
+            outline: #fff auto 1px;
         }
     }
     &__text {
@@ -146,7 +148,7 @@
     left: 50%;
     bottom: -10%;
     transform: translate(-50%, -10%);
-    background: #f7a00f;
+    background: #5FAD7B;
     padding: 30px;
     overflow-y: scroll;
     opacity: 0;
@@ -246,9 +248,12 @@
     }
     label {
         color: black;
-        font-family: "MontserratBold";
+        font-family: "Montserrat";
+        font-weight: 600;
         font-size: 16px;
         margin-top: 15px;
+        color: #fff;
+        margin-bottom: .5rem;
     }
     .input__wrapper {
         span {
@@ -259,6 +264,7 @@
 
 .input__wrapper {
     position: relative;
+    margin-top: 1rem;
     .error-feedback {
         visibility: hidden;
         position: absolute;
