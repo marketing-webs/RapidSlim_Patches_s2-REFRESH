@@ -397,11 +397,9 @@ p {
         justify-content: space-around;
         flex-wrap: wrap;
         &-img {
-            max-width: 140px;
-            margin: 15px;
+            margin: 10px;
             img {
-                width: auto;
-                height: 35px;
+                width: 7rem;
             }
         }
     }
@@ -465,13 +463,13 @@ p {
         &__button-2 {
             font-size: 18px;
         }
-        &__partners {
-            &-img {
-                img {
-                    height: 45px;
-                }
-            }
-        }
+        // &__partners {
+        //     &-img {
+        //         img {
+        //             height: 45px;
+        //         }
+        //     }
+        // }
         .discount__price .discount__text {
             font-size: 18px;
         }

@@ -2,13 +2,13 @@ import '../styles/discount/main-discount.scss';
 import $ from 'jquery';
 
 // url
-const queryUrl = location.search;
-const decodedUrl = atob(queryUrl.slice(3));
+// const queryUrl = location.search;
+// const decodedUrl = atob(queryUrl.slice(3));
 
 const counter1 = document.getElementById('timer-1');
 const counter2 = document.getElementById('timer-2');
-const layer = document.querySelector('.overlay');
-const popUp = document.querySelector('.popup');
+// const layer = document.querySelector('.overlay');
+// const popUp = document.querySelector('.popup');
 const button = document.querySelector('.discount__button-1');
 const hiddenForm = document.querySelector('.discount__hidden-form');
 const closeButton = document.querySelector('.popup__close');
@@ -37,25 +37,25 @@ const timer = setInterval(() => {
   }
 }, 1000);
 
-const mouseMove = e => {
-  mouseY = e.clientY;
-  windowWidth = window.innerWidth;
-  if (mouseY === 0 && !formValid && windowWidth >= 768) {
-    layer.style.display = 'block';
-    popUp.classList.add('popup--active');
-  }
-};
+// const mouseMove = e => {
+//   mouseY = e.clientY;
+//   windowWidth = window.innerWidth;
+//   if (mouseY === 0 && !formValid && windowWidth >= 768) {
+//     layer.style.display = 'block';
+//     popUp.classList.add('popup--active');
+//   }
+// };
 
 window.onload = () => {
   timer;
 };
 
-document.addEventListener('mousemove', mouseMove);
+// document.addEventListener('mousemove', mouseMove);
 
-closeButton.addEventListener('click', () => {
-  layer.style.display = 'none';
-  popUp.classList.remove('popup--active');
-});
+// closeButton.addEventListener('click', () => {
+//   layer.style.display = 'none';
+//   popUp.classList.remove('popup--active');
+// });
 ///////////////////////////////////// FORM VALIDATION
 
 const form1 = document.querySelector('.discount__form');
@@ -267,17 +267,17 @@ form2.addEventListener('submit', e => {
   }
 });
 
-form3.addEventListener('submit', e => {
-  e.preventDefault();
-  checkFreePromoInputs(phone2, 'error-3');
-  if (document.querySelectorAll('.error-3').length === 0) {
-    form3Value = {
-      phone: phone2.value.trim(),
-    };
-    const jsonForm3 = JSON.stringify(form3Value);
-    submitData(jsonForm3, 'send3.php');
-  }
-});
+// form3.addEventListener('submit', e => {
+//   e.preventDefault();
+//   checkFreePromoInputs(phone2, 'error-3');
+//   if (document.querySelectorAll('.error-3').length === 0) {
+//     form3Value = {
+//       phone: phone2.value.trim(),
+//     };
+//     const jsonForm3 = JSON.stringify(form3Value);
+//     submitData(jsonForm3, 'send3.php');
+//   }
+// });
 
 inputPhone1[0].addEventListener('blur', e => {
   let phoneNumberValue = {};

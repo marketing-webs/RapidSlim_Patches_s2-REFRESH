@@ -1,8 +1,16 @@
 import $ from 'jquery';
 ///////////////////////////////////// FORM VALIDATION
 export let formValid = false;
-const queryUrl = location.search;
-const decodedUrl = atob(queryUrl.slice(3));
+// const queryUrl = location.search;
+// const decodedUrl = atob(queryUrl.slice(3));
+
+const inputs = document.querySelectorAll(".form__input");
+
+inputs.forEach((e) => {
+    e.addEventListener("input", () => {
+      formValid = true;
+    });
+});
 
 const hiddenForm = document.querySelector('.hidden-form');
 const overlay = document.querySelector('.overlay');
