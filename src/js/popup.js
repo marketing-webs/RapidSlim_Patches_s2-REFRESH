@@ -7,6 +7,7 @@ let windowWidth = window.innerWidth;
 const layer = document.querySelector(".overlay");
 const popUp = document.getElementById("popup");
 const popUpClose = document.getElementById("popup-close");
+const popupTextClose = document.getElementById("close-text");
 const form = document.querySelector(".form");
 const section = document.querySelector(".section-12");
 
@@ -36,6 +37,10 @@ const popupTimeout = () => {
   });
   
   popUpClose.addEventListener("click", () => {
+    popUp.classList.remove("popup--visible");
+    overlay.style.display = "none";
+  });
+  popupTextClose.addEventListener("click", () => {
     popUp.classList.remove("popup--visible");
     overlay.style.display = "none";
   });
