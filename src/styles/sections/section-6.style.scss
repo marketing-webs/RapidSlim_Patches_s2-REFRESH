@@ -78,11 +78,19 @@
         font-weight: 600;
         background: #F1CC18;
         letter-spacing: 0.1rem;
+        display: block;
+        color: #000;
+        text-align: center;
         margin-top: 2rem;
         cursor: pointer;
+        transition: all .35s ease-in-out;
         @include media-sm {
             padding: 2.5rem;
             font-size: 3rem;
+        }
+        &:hover {
+            background: lighten(#F1CC18, 10%);
+            cursor: pointer;
         }
     }
 }

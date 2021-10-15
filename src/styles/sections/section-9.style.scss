@@ -121,7 +121,7 @@
         }
     }
     &__button {
-        background-color: #1C8F45;
+        background: #1C8F45;
         border: none;
         display: block;
         margin: 1rem auto;
@@ -129,9 +129,14 @@
         padding: 2rem;
         border-radius: 5px;
         cursor: pointer;
+        transition: all .35s ease-in-out;
 
         @include media-md {
             font-size: 1.8rem;
+        }
+
+        &:hover {
+            background: lighten(#1C8F45, 10%);
         }
     }
 }

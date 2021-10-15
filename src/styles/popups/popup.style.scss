@@ -130,15 +130,23 @@
     }
     &__button {
         width: fit-content;
-        padding: 1rem 4rem;
+        padding: 1rem 2rem;
         display: block;
         margin: 2rem auto 1rem;
         border: 1px solid #F5A114;
-        background-color: #F5A114;
+        background: #F5A114;
         border-radius: 10px;
         color: #fff;
         font-weight: 700;
         box-shadow: 0 10px 10px rgba(87,61,28, .5);
+
+        @include media-sm {
+            padding: 1rem 4rem;
+        }
+        &:hover {
+            cursor: pointer;
+            background: lighten(#F57E13, 10%);
+        }
     }
     &__link {
         color: #000;
