@@ -11,22 +11,32 @@
     }
     &__svg {
         margin-top: 0.5rem;
-        width: 36px;
+        width: 40px;
         flex-shrink: 0;
 
         @include media-xs {
             width: 46px;
         }
+        @include media-md {
+            width: 68px;
+        }
     }
     &__text-wrapper {
         margin-left: 1rem;
+
+        @include media-md {
+            margin-left: 2rem;
+        }
     }
     &__text {
-        font-size: .8rem;
+        font-size: 1.2rem;
         color: #000;
 
         @include media-xs {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+        }
+        @include media-md {
+            font-size: 1.6rem;
         }
     }
 }

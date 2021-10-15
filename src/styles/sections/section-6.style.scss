@@ -3,7 +3,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 2rem;
     padding-bottom: 2rem;
 
     @include media-sm {
@@ -40,7 +39,7 @@
         }
     }
     &__img {
-        max-width: 32rem;
+        max-width: 28rem;
 
         @include media-sm {
             max-width: 34rem;

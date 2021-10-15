@@ -46,6 +46,13 @@
     &__img {
         margin: 0 0 2rem 0;
     }
+    &__image--wrapper {
+        flex: 10;
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
     &__title-wrapper {
         max-width: 300px;
         margin: 0 auto;
@@ -89,7 +96,7 @@
         }
     }
     &__content {
-        flex: 10;
+        flex: 9;
         margin-right: 4rem;
 
         @include media-md {

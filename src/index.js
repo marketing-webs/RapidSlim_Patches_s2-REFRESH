@@ -6,7 +6,7 @@ import './js/popup';
 import './js/stories';
 import './js/timer';
 
-const queryUrl = location.search;
-history.replaceState({}, null, '/');
-const queryUrlElement = document.querySelector('#ref_url');
-queryUrlElement.href = `./discount.html${queryUrl}`;
+// const queryUrl = location.search;
+// history.replaceState({}, null, '/');
+// const queryUrlElement = document.querySelector('#ref_url');
+// queryUrlElement.href = `./discount.html${queryUrl}`;

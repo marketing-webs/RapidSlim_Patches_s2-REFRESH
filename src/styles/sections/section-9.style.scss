@@ -39,7 +39,7 @@
         &::before {
             content: 'Przed';
             position: absolute;
-            left: 3px;
+            left: 2px;
             bottom: 4px;
             width: 65px;
             height: 23px;
@@ -55,7 +55,7 @@
         &::after {
             content: 'Po';
             position: absolute;
-            right: 3px;
+            right: 2px;
             bottom: 4px;
             width: 65px;
             height: 23px;

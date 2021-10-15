@@ -136,6 +136,9 @@
         @media (min-width: 375px) {
             left: 55%;
         }
+        @include media-sm {
+            left: 53%;
+        }
     }
     &__list {
         position: relative;
